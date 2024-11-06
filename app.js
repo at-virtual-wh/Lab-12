@@ -1,7 +1,8 @@
- // Parte 1: Bucle for - Calcular suma y promedio con entrada de usuario
+ // Parte 1: Calcular suma y promedio con entrada de usuario
  function sumarNumeros() {
-    const entrada = document.getElementById('promedio').value;
-    const numeros = entrada.split(',').map(num => parseFloat(num.trim())); 
+    //const entrada = document.getElementById('promedio').value;
+    //const numeros = entrada.split(',').map(num => parseFloat(num.trim())); 
+    let numeros=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
     let suma = 0;
 
     for (let i = 0; i < numeros.length; i++) {
@@ -14,7 +15,7 @@
     document.getElementById('salidaPromedio').innerText = `Suma total: ${suma.toFixed(1)}, Promedio: ${promedio.toFixed(1)}`;
   }
 
-  // Parte 2: Bucle while - Ingreso de números hasta ingresar uno negativo
+  // Parte 2: Ingreso de números hasta ingresar uno negativo
   function ingresarNumeros() {
     let numerosIngresados = [];
     let suma = 0;
@@ -22,10 +23,13 @@
 
     while (true) {
       numero = parseFloat(prompt("Ingresa un número (negativo para terminar):"));
-      if (numero < 0) break;
-      if (!isNaN(numero)) {  // Verifica que sea un número válido
-        numerosIngresados.push(numero);
-        suma = suma + numero;
+      if (numero < 0) {
+        break;
+      }else{
+          if (!isNaN(numero)) { 
+            numerosIngresados.push(numero);
+            suma = suma + numero;
+          }
       }
     }
 
@@ -34,7 +38,7 @@
       <strong>Suma total:</strong> ${suma}`;
   }
 
-  // Parte 3: Bucle do...while - Validación de contraseña
+  // Parte 3: Validación de contraseña
   function validarContrasena() {
     const contrasenaCorrecta = "1234";
     let intentos = 0;
