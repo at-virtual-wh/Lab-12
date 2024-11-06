@@ -45,6 +45,9 @@
       contrasena = prompt("Ingresa la contraseña:");
       contrasenasIngresadas.push(contrasena);
       intentos++;
+      if (contrasena !== contrasenaCorrecta) {
+        alert("Contraseña Incorrecta")
+      }
     } while (contrasena !== contrasenaCorrecta);
 
     document.getElementById('salidaContrasena').innerHTML = `
