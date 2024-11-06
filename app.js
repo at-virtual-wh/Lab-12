@@ -53,5 +53,5 @@
     document.getElementById('salidaContrasena').innerHTML = `
       <strong>¡Contraseña correcta!</strong><br>
       <strong>Intentos fallidos:</strong> ${intentos-1}<br>
-      <strong>Contraseñas ingresadas:</strong> ${contrasenasIngresadas.join(', ')-1}`;
+      <strong>Contraseñas ingresadas:</strong> ${contrasenasIngresadas.join(', ')}`;
   }
